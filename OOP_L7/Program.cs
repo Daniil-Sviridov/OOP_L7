@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+namespace OOP_L7
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
