@@ -17,7 +17,6 @@ namespace OOP_L7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Привет! Марина.");
         }
     }
 }
