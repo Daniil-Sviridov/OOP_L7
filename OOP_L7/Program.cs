@@ -17,7 +17,7 @@ namespace OOP_L7
     {
         static void Main(string[] args)
         {
- 
+
             ACoder coder = new ACoder();
 
             string str = "В Санкт-Петербурге прошли обыски из-за уборки снега";
@@ -26,6 +26,19 @@ namespace OOP_L7
 
             coder.Decode(ref str);
             Console.WriteLine(str);
+
+            Console.WriteLine();
+
+            BCoder coderb = new BCoder();
+
+            string strB = "Что делать, если QR-код недействителен";
+
+            coderb.Encode(ref strB);
+            Console.WriteLine(strB);
+
+            coderb.Decode(ref strB);
+            Console.WriteLine(strB);
+
         }
     }
 }

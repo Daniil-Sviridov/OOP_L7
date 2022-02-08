@@ -14,7 +14,7 @@ namespace OOP_L7
         private string _alp;
         private string _ALP;
 
-       public ACoder() 
+        public ACoder()
         {
             _alp = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
             _ALP = _alp.ToUpper();
@@ -25,18 +25,19 @@ namespace OOP_L7
         public void Decode(ref string in_str)
         {
             StringBuilder sb = new StringBuilder();
+            int x = 0;
 
             for (int i = 0; i < in_str.Length; i++)
             {
                 if (_alp.Contains(in_str[i]))
                 {
-                    int x = (_alp.IndexOf(in_str[i]) - _k) % _n;
+                    x = (_alp.IndexOf(in_str[i]) - _k) % _n;
                     x = x + (x >= 0 ? 0 : _n);
                     sb.Append(_alp.Substring(x, 1));
                 }
                 else if (_ALP.Contains(in_str[i]))
                 {
-                    int x = (_ALP.IndexOf(in_str[i]) - _k) % _n;
+                    x = (_ALP.IndexOf(in_str[i]) - _k) % _n;
                     x = x + (x >= 0 ? 0 : _n);
                     sb.Append(_ALP.Substring(x, 1));
                 }
@@ -50,13 +51,13 @@ namespace OOP_L7
         {
             StringBuilder sb = new StringBuilder();
 
-            for(int i = 0; i < in_str.Length; i ++)
+            for (int i = 0; i < in_str.Length; i++)
             {
                 if (_alp.Contains(in_str[i]))
                 {
-                   int y = (_alp.IndexOf(in_str[i]) + _k) % _n;
+                    int y = (_alp.IndexOf(in_str[i]) + _k) % _n;
                     //in_str[i] = _alp.Substring(y, 1);
-                    sb.Append(_alp.Substring(y, 1)); 
+                    sb.Append(_alp.Substring(y, 1));
                 }
                 else if (_ALP.Contains(in_str[i]))
                 {
