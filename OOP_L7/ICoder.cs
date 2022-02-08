@@ -8,7 +8,7 @@ namespace OOP_L7
 {
     internal interface ICoder
     {
-        public void Encode(string in_str);
-        public void Decode(string in_str);
+        public void Encode(ref string in_str);
+        public void Decode(ref string in_str);
     }
 }

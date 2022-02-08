@@ -17,6 +17,15 @@ namespace OOP_L7
     {
         static void Main(string[] args)
         {
+ 
+            ACoder coder = new ACoder();
+
+            string str = "В Санкт-Петербурге прошли обыски из-за уборки снега";
+            coder.Encode(ref str);
+            Console.WriteLine(str);
+
+            coder.Decode(ref str);
+            Console.WriteLine(str);
         }
     }
 }
